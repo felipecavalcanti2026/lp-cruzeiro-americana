@@ -6,11 +6,11 @@
 <title>Cruzeiro do Sul Virtual · Polo Americana Centro – SP</title>
 <meta name="description" content="Faculdade EAD, Semipresencial e Pós-Graduação reconhecidas pelo MEC, com o suporte do Polo Americana Centro. Comece em qualquer mês do ano.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#000044">
+<meta name="theme-color" content="#f3f3f7">
 <link rel="icon" href="assets/LOGO.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/2IMAGEM-02.webp">
 
 <!--
@@ -21,283 +21,302 @@
 
 <style>
 :root{
-  --navy-950:#00002e;
+  --bg:#f3f3f7;
+  --tile:#ffffff;
+  --navy-950:#05062b;
   --navy-900:#000044;
   --navy-700:#213E88;
-  --navy-500:#3d5fc4;
-  --lav-100:#EBECFF;
-  --lav-50:#f5f6ff;
-  --amber:#FFC53D;
-  --amber-600:#f2a900;
+  --navy-500:#3a5bd0;
+  --lav:#EBECFF;
+  --lav-2:#dfe1ff;
+  --sky:#8FB8FF;
+  --violet:#B9A8FF;
+  --pop:linear-gradient(135deg,#3a5bd0 0%,#5b4fd6 60%,#7a5af0 100%);
   --wa:#25D366;
   --wa-700:#1ea952;
-  --ink:#0d1030;
-  --ink-2:#4a4f72;
-  --line:#e2e4f3;
-  --white:#fff;
-  --radius:20px;
-  --radius-sm:12px;
-  --shadow:0 20px 50px -20px rgba(0,0,68,.25);
-  --shadow-sm:0 6px 20px -8px rgba(0,0,68,.18);
-  --wrap:1180px;
-  --display:"Bricolage Grotesque",system-ui,sans-serif;
-  --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ink:#0b0c2a;
+  --ink-2:#55597a;
+  --line:#e4e5ef;
+  --r:28px;
+  --r-sm:16px;
+  --gap:14px;
+  --wrap:1240px;
+  --sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Outfit",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--navy-500);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 24px}
+[hidden]{display:none!important}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+svg{width:1em;height:1em;flex:none}
 
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;font-weight:700}
-h2{font-size:clamp(1.9rem,4.2vw,3rem)}
-h2 em,h1 em{font-style:normal;color:var(--amber)}
-h2.light em{color:#2f52c4}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy-700);margin-bottom:14px}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
-.lead{font-size:1.08rem;color:var(--ink-2);max-width:60ch}
+h1,h2,h3{font-weight:700;letter-spacing:-.025em;line-height:1.05}
+h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#3a5bd0,#7a5af0);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dark h2 em,.dark h1 em{background-image:linear-gradient(90deg,var(--sky),var(--violet))}
+h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+.label{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--navy-500)}
+.dark .label{color:rgba(255,255,255,.7)}
+.dark .label::before{background:var(--sky)}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font-weight:700;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
-.btn svg{width:20px;height:20px;flex:none}
-.btn-wa{background:var(--wa);color:#04210f;box-shadow:0 12px 30px -10px rgba(37,211,102,.7)}
-.btn-wa:hover{background:#2be070;transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(37,211,102,.8)}
-.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
-.btn-navy{background:var(--navy-900);color:#fff}
-.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
-.btn-sm{min-height:42px;padding:0 18px;font-size:.92rem}
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:1rem;padding:15px 24px;border-radius:999px;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{font-size:1.2em}
+.btn-wa{background:var(--wa);color:#04210f;box-shadow:0 10px 24px -12px rgba(37,211,102,.9)}
+.btn-wa:hover{background:#2fe072;transform:translateY(-2px)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--navy-700);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--line);background:#fff}
+.btn-line:hover{border-color:var(--ink)}
+.btn-sm{padding:10px 18px;font-size:.92rem}
 
 /* Header */
-.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s ease,box-shadow .3s ease,backdrop-filter .3s}
-.hdr.scrolled{background:rgba(0,0,46,.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
-.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
-.hdr .logo img{height:34px;width:auto}
-.nav{display:flex;gap:28px;font-size:.93rem;font-weight:600;color:rgba(255,255,255,.82)}
-.nav a{position:relative;padding:6px 0}
-.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .25s}
-.nav a:hover{color:#fff}
-.nav a:hover::after{transform:scaleX(1)}
-@media (max-width:900px){.nav{display:none}.hdr .logo img{height:28px}}
+.hdr{position:sticky;top:12px;z-index:50;padding:0 12px}
+.hdr .bar{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:24px;padding:10px 10px 10px 22px;border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);border:1px solid rgba(255,255,255,.9);box-shadow:0 1px 0 rgba(11,12,42,.04);transition:box-shadow .3s}
+.hdr.scrolled .bar{box-shadow:0 12px 32px -18px rgba(11,12,42,.35)}
+.logo img{height:30px;width:auto;filter:brightness(0)}
+.nav{display:flex;gap:4px;margin:0 auto}
+.nav a{font-size:.93rem;font-weight:500;color:var(--ink-2);padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nav a:hover{background:var(--bg);color:var(--ink)}
+
+/* Bento */
+section{padding:56px 0}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.t{position:relative;overflow:hidden;background:var(--tile);border-radius:var(--r);padding:clamp(24px,3vw,40px)}
+.t.dark{background:var(--navy-900);color:#fff}
+.t.lav{background:var(--lav)}
+.t.pop{background:var(--pop);color:#fff}
+.s3{grid-column:span 3}.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+.r2{grid-row:span 2}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+.head h2{max-width:16ch}
+.head p{max-width:38ch;color:var(--ink-2)}
 
 /* Hero */
-.hero{position:relative;background:radial-gradient(120% 90% at 85% 10%,#2b3fa0 0%,transparent 55%),radial-gradient(80% 70% at 0% 100%,#14197a 0%,transparent 60%),var(--navy-900);color:#fff;padding:120px 0 0;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(70% 60% at 50% 30%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000 30%,transparent 80%)}
-.hero .star{position:absolute;width:520px;right:-140px;top:60px;opacity:.07;filter:brightness(0) invert(1);pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
-.hero-copy{padding-bottom:72px}
-.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:.85rem;font-weight:600;margin-bottom:24px}
-.pill .dot{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--amber);color:var(--navy-900)}
-.pill .dot svg{width:14px;height:14px}
-.hero h1{font-size:clamp(2.3rem,5.6vw,4.2rem);margin-bottom:22px;font-weight:800}
-.hero .sub{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:600;color:#fff;margin-bottom:14px;letter-spacing:-.01em}
-.hero p.body{color:rgba(255,255,255,.75);max-width:56ch;margin-bottom:10px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.88rem;color:rgba(255,255,255,.8);font-weight:500}
-.trust span{display:inline-flex;align-items:center;gap:8px}
-.trust svg{width:18px;height:18px;color:var(--amber)}
-.hero-img{position:relative;align-self:end}
-.hero-img img{width:100%;max-width:520px;margin-left:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35))}
-.float-card{position:absolute;left:-10px;bottom:56px;background:#fff;color:var(--ink);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);animation:bob 5s ease-in-out infinite}
-.float-card .ic{width:42px;height:42px;border-radius:12px;background:var(--lav-100);display:grid;place-items:center;color:var(--navy-700)}
-.float-card .ic svg{width:22px;height:22px}
-.float-card b{display:block;font-family:var(--display);font-size:1.05rem;line-height:1.1}
-.float-card small{color:var(--ink-2);font-size:.8rem}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media (max-width:900px){
-  .hero{padding-top:104px}
-  .hero-grid{grid-template-columns:1fr;gap:10px}
-  .hero-copy{padding-bottom:10px}
-  .hero-img img{max-width:380px;margin:0 auto}
-  .float-card{left:8px;bottom:30px;padding:10px 14px}
-}
-@media (max-width:520px){.hero .ctas .btn{width:100%}.hide-sm{display:none}}
+.hero{padding:56px 0 0}
+.hero-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:end;margin-bottom:36px}
+.pill{grid-column:span 12;justify-self:start;display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500;padding:7px 14px 7px 8px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.pill .dot{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--lav);color:var(--navy-700);font-size:.8rem}
+.hero h1{grid-column:span 12;font-size:clamp(2.5rem,6.6vw,5.9rem);max-width:17ch;margin:8px 0 6px;text-wrap:balance}
+.hero .intro{grid-column:1/span 6;color:var(--ink-2);font-size:1.05rem}
+.hero .intro b{display:block;color:var(--ink);font-size:1.3rem;font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
+.hero .intro p+p{margin-top:10px}
+.hero .act{grid-column:8/span 5;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.hero .act .row{display:flex;flex-wrap:wrap;gap:10px}
+.trust{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.88rem;color:var(--ink-2)}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{color:var(--wa-700)}
 
-/* Stats */
-.stats{position:relative;z-index:2;margin-top:-1px;background:var(--navy-950);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:28px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
-.stat:last-child{border-right:0}
-.stat b{display:block;font-family:var(--display);font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--amber);line-height:1;font-weight:800}
-.stat span{display:block;margin-top:8px;font-size:.86rem;color:rgba(255,255,255,.72)}
-@media (max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr;padding:0}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}}
+.photo{padding:0;background:radial-gradient(90% 70% at 70% 30%,#2b4bb0 0%,var(--navy-900) 70%);color:#fff;min-height:520px;display:flex;align-items:flex-end;justify-content:center}
+.photo img{width:min(88%,520px);height:auto;margin-top:40px}
+.photo .cap{position:absolute;left:24px;top:24px;display:flex;flex-direction:column;gap:2px}
+.photo .cap b{font-size:1.05rem;font-weight:600}
+.photo .cap small{color:rgba(255,255,255,.7);font-size:.88rem}
 
-/* Sections */
-section{padding:clamp(72px,9vw,120px) 0}
-.sec-head{max-width:760px;margin-bottom:48px}
-.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-head.center .eyebrow{justify-content:center}
-.sec-head h2{margin-bottom:14px}
+.stat{display:flex;flex-direction:column;justify-content:space-between;min-height:250px}
+.stat .k{font-size:clamp(3rem,5.4vw,4.8rem);font-weight:700;letter-spacing:-.035em;line-height:1}
+.stat .k small{font-size:.45em;letter-spacing:-.02em}
+.stat p{font-size:1rem;color:var(--ink-2);max-width:20ch}
+.stat .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--bg);font-size:1.25rem;color:var(--navy-700)}
+.dark.stat p{color:rgba(255,255,255,.72)}
+.dark.stat .ic{background:rgba(255,255,255,.1);color:var(--sky)}
+.pop.stat p{color:rgba(255,255,255,.8)}
+.pop.stat .ic{background:rgba(255,255,255,.16);color:#fff}
+.pop.stat .k{font-size:clamp(2.4rem,4vw,3.4rem)}
 
 /* Polo */
-.polo{background:var(--lav-50)}
-.polo-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.polo h3{font-family:var(--body);font-size:1.15rem;font-weight:700;color:var(--navy-700);margin:6px 0 12px;letter-spacing:0;line-height:1.4}
-.polo p{color:var(--ink-2);margin-bottom:28px}
-.polo-card{background:var(--navy-900);color:#fff;border-radius:28px;padding:32px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.polo-card::after{content:"";position:absolute;width:260px;height:260px;right:-80px;top:-80px;background:radial-gradient(circle,rgba(255,197,61,.35),transparent 70%)}
-.polo-card .tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:999px;margin-bottom:18px}
-.polo-card h4{font-family:var(--display);font-size:1.6rem;line-height:1.15;margin-bottom:22px;position:relative}
-.polo-card ul{list-style:none;display:grid;gap:14px;margin-bottom:26px;position:relative}
-.polo-card li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:rgba(255,255,255,.85)}
-.polo-card li svg{width:20px;height:20px;flex:none;color:var(--amber);margin-top:2px}
-.polo-card li a:hover{color:#fff;text-decoration:underline}
-.polo-card .btn{width:100%;position:relative}
-@media (max-width:900px){.polo-grid{grid-template-columns:1fr;gap:36px}}
+.polo-main{display:flex;flex-direction:column;gap:18px;justify-content:space-between}
+.polo-main h3{font-size:1.25rem;font-weight:600;letter-spacing:-.015em;line-height:1.35;max-width:30ch}
+.polo-main p{color:var(--ink-2);max-width:56ch}
+.polo-card{display:flex;flex-direction:column;gap:22px}
+.polo-card h4{font-size:1.6rem;font-weight:600;letter-spacing:-.03em}
+.polo-card ul{list-style:none;display:flex;flex-direction:column;gap:14px;font-size:.98rem}
+.polo-card li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.85)}
+.polo-card li svg{margin-top:4px;color:var(--sky)}
+.polo-card a:hover{color:#fff;text-decoration:underline}
+.polo-card .btn{margin-top:auto;align-self:flex-start}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(58,91,208,.55),transparent 65%);right:-140px;top:-160px;pointer-events:none}
 
-/* Benefits */
-.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
-.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--lav-100);color:var(--navy-700);margin-bottom:20px}
-.card .ic svg{width:26px;height:26px}
-.card h3{font-size:1.3rem;margin-bottom:10px}
-.card p{color:var(--ink-2);font-size:.97rem}
-.card.feat{background:linear-gradient(150deg,var(--navy-700),var(--navy-900));color:#fff;border:0}
-.card.feat .ic{background:rgba(255,255,255,.12);color:var(--amber)}
-.card.feat p{color:rgba(255,255,255,.78)}
-.card.accent{background:var(--amber);border:0}
-.card.accent .ic{background:rgba(0,0,68,.1);color:var(--navy-900)}
-.card.accent p{color:#3b3000}
-.bento .card:nth-child(1){grid-column:span 2}
-.bento .card:nth-child(6){grid-column:span 3}
-.bento-cta{display:flex;justify-content:center;margin-top:40px}
-@media (max-width:900px){.bento{grid-template-columns:1fr 1fr}.bento .card:nth-child(1),.bento .card:nth-child(6){grid-column:span 3}}
-@media (max-width:600px){.bento{grid-template-columns:1fr}.bento .card:nth-child(1),.bento .card:nth-child(6){grid-column:auto}.card{padding:24px}}
+/* Diferenciais */
+.feat{display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:440px}
+.feat .clock{font-weight:800;font-size:clamp(3.6rem,8vw,7rem);line-height:.95;letter-spacing:-.035em;background:linear-gradient(90deg,#213E88,#7a5af0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card h3{font-size:1.3rem;letter-spacing:-.025em;line-height:1.15;margin:20px 0 10px}
+.feat h3{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-top:0}
+.card p{color:var(--ink-2);font-size:.98rem}
+.card .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--lav);color:var(--navy-700)}
+.card .ic svg{width:24px;height:24px}
+.go-now{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.go-now h3{font-size:clamp(1.6rem,3vw,2.5rem);margin:0 0 8px;max-width:22ch}
+.go-now p{color:rgba(255,255,255,.82);max-width:54ch}
 
-/* Courses */
-.courses{background:var(--lav-50)}
-.c-toolbar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:30px}
-.tabs{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;overflow-x:auto;max-width:100%;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{padding:10px 20px;border-radius:999px;font-weight:700;font-size:.92rem;color:var(--ink-2);white-space:nowrap;transition:background .2s,color .2s}
-.tab[aria-selected="true"]{background:var(--navy-900);color:#fff}
-.tab .n{font-size:.75rem;opacity:.6;margin-left:4px}
-.search{position:relative;flex:1;min-width:220px;max-width:340px}
-.search input{width:100%;height:48px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:0 18px 0 46px;font:inherit;font-size:.95rem;color:var(--ink)}
-.search input:focus{outline:none;border-color:var(--navy-700);box-shadow:0 0 0 4px rgba(33,62,136,.12)}
-.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--ink-2)}
-.grid-c{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.course{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.course:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.course .thumb{aspect-ratio:340/183;overflow:hidden;background:var(--lav-100)}
+/* Cursos */
+.c-toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.tabs{display:inline-flex;gap:4px;padding:5px;background:#fff;border-radius:999px;border:1px solid var(--line);overflow-x:auto;max-width:100%}
+.tab{padding:10px 18px;border-radius:999px;font-weight:500;font-size:.95rem;color:var(--ink-2);display:inline-flex;gap:8px;align-items:center;white-space:nowrap;transition:background .2s,color .2s}
+.tab .n{font-size:.75rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--bg)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.tab[aria-selected="true"] .n{background:rgba(255,255,255,.16)}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:0 18px;min-width:280px;color:var(--ink-2)}
+.search input{border:0;outline:0;background:none;font:inherit;padding:13px 0;width:100%;color:var(--ink)}
+.search:focus-within{border-color:var(--navy-500)}
+.grid-c{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.course{background:#fff;border-radius:22px;padding:8px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.course:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(11,12,42,.35)}
+.course .thumb{border-radius:16px;overflow:hidden;aspect-ratio:340/200;background:var(--lav)}
 .course .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.course:hover .thumb img{transform:scale(1.06)}
-.course .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
-.course .mod{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px}
-.course h3{font-family:var(--body);font-size:1.02rem;font-weight:700;letter-spacing:0;line-height:1.3;margin-bottom:6px}
-.course .det{font-size:.84rem;color:var(--ink-2);margin-bottom:14px}
-.course .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--navy-700)}
-.course .go svg{width:16px;height:16px;transition:transform .2s}
-.course:hover .go svg{transform:translateX(4px)}
-.empty{grid-column:1/-1;text-align:center;padding:40px;color:var(--ink-2)}
-.more-row{display:flex;justify-content:center;margin-top:28px}
-.btn-outline{border:1.5px solid var(--navy-900);color:var(--navy-900)}
-.btn-outline:hover{background:var(--navy-900);color:#fff}
-.mec-band{margin-top:48px;background:var(--navy-900);color:#fff;border-radius:24px;padding:28px 32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-.mec-band p{font-family:var(--display);font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;max-width:640px;line-height:1.3}
-.mec-band p b{color:var(--amber)}
-@media (max-width:1000px){.grid-c{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:760px){.tabs{display:flex;width:100%}.tab{flex:1;padding:10px 6px;font-size:.86rem}.tab .n{display:none}.grid-c{grid-template-columns:1fr 1fr;gap:12px}.course .body{padding:12px 14px 14px}.course h3{font-size:.93rem}.course .det{font-size:.78rem}.search{max-width:none}.mec-band{padding:24px}.mec-band .btn{width:100%}}
+.course:hover .thumb img{transform:scale(1.05)}
+.course .body{padding:14px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.course .mod{font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-500)}
+.course h3{font-size:1.1rem;letter-spacing:-.02em;line-height:1.2}
+.course .det{font-size:.88rem;color:var(--ink-2)}
+.course .go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:600;color:var(--ink)}
+.course:hover .go svg{transform:translateX(3px)}
+.course .go svg{transition:transform .2s}
+.empty{grid-column:1/-1;background:#fff;border-radius:22px;padding:32px;text-align:center;color:var(--ink-2)}
+.more-row{display:flex;justify-content:center;margin-top:22px}
+.mec{margin-top:var(--gap);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mec p{font-size:clamp(1.15rem,2vw,1.5rem);letter-spacing:-.02em;line-height:1.3;max-width:40ch}
+.mec p b{font-weight:600;color:var(--sky)}
 
 /* Para quem */
-.who-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
-.who-list{list-style:none;display:grid;gap:12px;margin:28px 0 32px}
-.who-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:var(--lav-50);border:1px solid var(--line);font-weight:500}
-.who-list li .ck{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy-900);color:var(--amber);display:grid;place-items:center}
-.who-list li .ck svg{width:15px;height:15px}
-.who-visual{position:relative;border-radius:32px;background:linear-gradient(160deg,var(--navy-700),var(--navy-900));min-height:520px;overflow:hidden;color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:flex-end}
-.who-visual .star{position:absolute;width:115%;top:-12%;right:-35%;opacity:.12;filter:brightness(0) invert(1)}
-.who-visual .big{font-family:var(--display);font-size:clamp(4rem,9vw,6.5rem);font-weight:800;line-height:.9;color:var(--amber);position:relative}
-.who-visual .cap{position:relative;font-size:1.05rem;color:rgba(255,255,255,.85);max-width:30ch;margin-top:12px}
-.who-visual .chips{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.who-visual .chips span{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:.85rem;font-weight:600}
-@media (max-width:900px){.who-grid{grid-template-columns:1fr;gap:36px}.who-visual{min-height:360px;padding:30px;order:2}}
+.who-list{list-style:none;display:flex;flex-direction:column;margin:26px 0 30px}
+.who-list li{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);font-size:1.05rem}
+.who-list li:last-child{border-bottom:1px solid var(--line)}
+.who-list .n{font-weight:700;font-size:.95rem;line-height:1;min-width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--lav);color:var(--navy-500);margin-top:-4px}
+.rhythm{display:flex;flex-direction:column;justify-content:space-between;gap:30px;background:linear-gradient(165deg,var(--navy-700),var(--navy-900) 70%)}
+.rhythm .big{font-weight:800;font-size:clamp(3.6rem,7.5vw,6.8rem);line-height:.95;letter-spacing:-.035em}
+.rhythm .cap{font-size:1.15rem;color:rgba(255,255,255,.82);max-width:26ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:.88rem}
+.star{position:absolute;width:70px;opacity:.9;right:28px;top:28px}
 
 /* Futuro */
-.future{background:var(--navy-900);color:#fff;position:relative;overflow:hidden}
-.future::before{content:"";position:absolute;inset:auto -10% -40% auto;width:700px;height:700px;background:radial-gradient(circle,rgba(61,95,196,.45),transparent 65%)}
-.future-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.future .eyebrow{color:var(--amber)}
-.future h3{font-family:var(--body);font-size:1.1rem;font-weight:500;line-height:1.6;color:rgba(255,255,255,.88);letter-spacing:0;margin:18px 0}
-.future p{color:rgba(255,255,255,.7)}
-.map-card{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:36px;backdrop-filter:blur(6px)}
-.map-card .num{font-family:var(--display);font-size:clamp(3.5rem,8vw,5.5rem);font-weight:800;line-height:1;background:linear-gradient(90deg,#fff,var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
-.map-card .lbl{font-size:1.05rem;color:rgba(255,255,255,.8);margin:6px 0 26px}
-.map-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.map-card .row div{background:rgba(255,255,255,.06);border-radius:16px;padding:18px}
-.map-card .row b{display:block;font-family:var(--display);font-size:1.15rem;margin-bottom:4px}
-.map-card .row span{font-size:.85rem;color:rgba(255,255,255,.65)}
-@media (max-width:900px){.future-grid{grid-template-columns:1fr;gap:36px}.map-card{padding:26px}}
+.future-main{display:flex;flex-direction:column;gap:20px}
+.future-main h3{font-size:1.2rem;font-weight:500;letter-spacing:-.015em;line-height:1.45;color:var(--ink)}
+.future-main p{color:var(--ink-2)}
+.map{display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:420px}
+.map .num{font-size:clamp(4rem,9vw,7.6rem);font-weight:700;letter-spacing:-.04em;line-height:.9}
+.map .lbl{color:rgba(255,255,255,.75);font-size:1.1rem;margin-top:10px}
+.map .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.map .row div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-sm);padding:16px}
+.map .row b{display:block;font-weight:600;margin-bottom:4px}
+.map .row span{font-size:.88rem;color:rgba(255,255,255,.7)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:18px 18px;mask-image:linear-gradient(200deg,#000 10%,transparent 60%);-webkit-mask-image:linear-gradient(200deg,#000 10%,transparent 60%);pointer-events:none}
 
-/* Testimonials */
-.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.vid{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:var(--shadow-sm)}
-.vid button{position:absolute;inset:0;width:100%;height:100%}
-.vid img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s;opacity:.88}
-.vid:hover img{transform:scale(1.05);opacity:1}
-.vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;color:var(--navy-900);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
-.vid:hover .play{transform:translate(-50%,-50%) scale(1.08)}
-.vid .play svg{width:24px;height:24px;margin-left:3px}
-.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media (max-width:1000px){.vids{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.vids{grid-template-columns:1fr}}
+/* Depoimentos */
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+.vid{position:relative;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--navy-900)}
+.vid button,.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.vid button:hover img{transform:scale(1.04)}
+.vid .play{position:absolute;left:14px;right:14px;bottom:14px;justify-content:center;display:inline-flex;align-items:center;gap:10px;padding:10px 18px 10px 12px;border-radius:999px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);font-weight:600;font-size:.92rem;color:var(--ink)}
+.vid .play i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-size:.8rem}
 
-/* CTA band */
-.cta{padding:0 0 clamp(72px,9vw,120px)}
-.cta-box{position:relative;overflow:hidden;border-radius:32px;background:radial-gradient(90% 120% at 100% 0%,#3d5fc4 0%,transparent 55%),var(--navy-900);color:#fff;padding:clamp(40px,6vw,72px);display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center}
-.cta-box .logo-badge{width:96px;height:96px;border-radius:50%;box-shadow:0 0 0 10px rgba(255,255,255,.06)}
-.cta-box h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:10px}
-.cta-box p{color:rgba(255,255,255,.78);font-size:1.05rem;max-width:52ch}
-@media (max-width:900px){.cta-box{grid-template-columns:1fr;text-align:center;justify-items:center;gap:22px}.cta-box .btn{width:100%;max-width:380px}}
+/* CTA */
+.cta{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;background:radial-gradient(120% 140% at 100% 0%,var(--navy-700) 0%,var(--navy-900) 55%)}
+.cta .badge{width:96px;height:96px;border-radius:24px;background:#fff;padding:10px}
+.cta h2{font-size:clamp(1.8rem,3.4vw,2.9rem);max-width:20ch}
+.cta p{margin-top:10px;color:rgba(255,255,255,.78);max-width:52ch}
 
 /* FAQ */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
-.faq-side{position:sticky;top:100px}
-.faq-side p{color:var(--ink-2);margin:14px 0 26px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq details:first-child{border-top:1px solid var(--line)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;cursor:pointer;font-weight:700;font-size:1.05rem}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{flex:none;width:34px;height:34px;border-radius:50%;background:var(--lav-100);display:grid;place-items:center;color:var(--navy-700);transition:transform .3s,background .3s}
-.faq summary .pm svg{width:16px;height:16px}
-.faq details[open] summary .pm{transform:rotate(45deg);background:var(--navy-900);color:#fff}
-.faq details p{padding:0 50px 24px 0;color:var(--ink-2)}
-@media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:24px}.faq-side{position:static}.faq details p{padding-right:0}}
+.faq-side{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.faq-side p{color:var(--ink-2)}
+.faq-side .btn{margin-top:auto}
+.faq-list{padding-top:10px;padding-bottom:10px}
+details{border-bottom:1px solid var(--line)}
+details:last-child{border-bottom:0}
+summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;cursor:pointer;font-weight:600;font-size:1.08rem;letter-spacing:-.015em}
+summary::-webkit-details-marker{display:none}
+.pm{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--bg);transition:transform .3s,background .2s}
+details[open] .pm{transform:rotate(45deg);background:var(--lav)}
+details p{padding:0 50px 22px 0;color:var(--ink-2)}
 
 /* Footer */
-footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 120px;font-size:.93rem}
-.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
-footer img{height:36px;width:auto;margin-bottom:18px}
-footer h4{font-family:var(--display);color:#fff;font-size:1rem;margin-bottom:14px}
-footer ul{list-style:none;display:grid;gap:10px}
-footer li{display:flex;gap:10px;align-items:flex-start}
-footer li svg{width:18px;height:18px;flex:none;color:var(--amber);margin-top:2px}
-footer a:hover{color:#fff}
-.copy{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:.82rem;color:rgba(255,255,255,.5)}
-@media (max-width:760px){.f-grid{grid-template-columns:1fr;gap:30px}}
+footer{padding:12px 0 40px}
+.f{background:var(--ink);color:rgba(255,255,255,.75);border-radius:var(--r);padding:clamp(28px,4vw,48px)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1.2fr 1fr;gap:40px}
+.f-logo{display:inline-block;margin-bottom:18px}
+.f-logo img{height:28px;width:auto}
+.f h4{color:#fff;font-weight:600;margin-bottom:14px}
+.f ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.95rem}
+.f li{display:flex;gap:10px;align-items:flex-start}
+.f li svg{margin-top:4px;color:var(--sky)}
+.f a:hover{color:#fff}
+.copy{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.85rem}
 
-/* Floating WhatsApp + mobile bar */
-.fab{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#fff;box-shadow:0 12px 30px -6px rgba(37,211,102,.6);transition:transform .2s}
-.fab:hover{transform:scale(1.07)}
-.fab svg{width:32px;height:32px}
-.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.4s ease-out infinite}
-@keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+/* Flutuantes */
+.fab{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--wa);color:#04210f;font-size:1.7rem;box-shadow:0 14px 30px -10px rgba(37,211,102,.8);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
 .mbar{display:none}
-@media (max-width:760px){
-  .fab{display:none}
-  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s ease}
-  .mbar.show{transform:none}
-  .mbar .btn{width:100%;min-height:52px}
-}
 
 /* Reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
+
+/* Responsivo */
+@media (max-width:1080px){
+  .nav{display:none}
+  .hdr .btn-sm{margin-left:auto}
+  .hero .intro{grid-column:span 7}
+  .hero .act{grid-column:8/span 5}
+}
+@media (max-width:900px){
+  .vids{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .s3,.s4,.s5,.s6,.s7,.s8{grid-column:span 12}
+  .stat.s3{grid-column:span 6}
+  .r2{grid-row:auto}
+  .hero .intro,.hero .act{grid-column:span 12}
+  .photo{min-height:420px}
+  .feat{min-height:0}
+  .grid-c{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .head{flex-direction:column;align-items:flex-start}
+  .go-now,.mec{flex-direction:column;align-items:flex-start}
+  .cta{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .f-grid>div:first-child{grid-column:span 2}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  :root{--r:22px;--gap:10px}
+  section{padding:40px 0}
+  .hero{padding-top:36px}
+  .hdr{padding:0 8px;top:8px}
+  .hdr .bar{padding:8px 8px 8px 16px}
+  .logo img{height:24px}
+  .hdr .btn-sm span{display:none}
+  .hdr .btn-sm{padding:10px}
+  .hero .act .row{width:100%}
+  .hero .act .btn{flex:1 1 100%}
+  .stat{min-height:180px;padding:20px}
+  .stat .ic{width:36px;height:36px;font-size:1rem;border-radius:11px}
+  .stat .k{font-size:2.5rem}
+  .pop.stat .k{font-size:1.9rem}
+  .stat p{font-size:.88rem}
+  .photo{min-height:340px}
+  .search{min-width:0;width:100%}
+  .grid-c{grid-template-columns:1fr}
+  .course{flex-direction:row;align-items:stretch}
+  .course .thumb{width:118px;flex:none;aspect-ratio:auto}
+  .course .body{padding:8px 8px 8px 14px}
+  .vids{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vid .play span{display:none}
+  .vid .play{right:auto;left:12px;bottom:12px;padding:6px}
+  .map .row{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .f-grid>div:first-child{grid-column:auto}
+  details p{padding-right:0}
+  .fab{display:none}
+  .mbar{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;transform:translateY(140%);transition:transform .35s}
+  .mbar.show{transform:none}
+  .mbar .btn{width:100%;box-shadow:0 14px 30px -10px rgba(11,12,42,.45)}
+  footer{padding-bottom:96px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
@@ -313,13 +332,16 @@ footer a:hover{color:#fff}
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-cap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM20 17v4H6.5A2.5 2.5 0 0 1 4 18.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M20 20l-3.5-3.5"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></symbol>
 </svg>
 
 <header class="hdr" id="hdr">
-  <div class="wrap">
+  <div class="bar">
     <a class="logo" href="#topo" aria-label="Cruzeiro do Sul Virtual – início"><img src="assets/logo.png" alt="Cruzeiro do Sul Virtual" width="768" height="182"></a>
     <nav class="nav" aria-label="Principal">
       <a href="#cursos">Cursos</a>
@@ -334,57 +356,67 @@ footer a:hover{color:#fff}
 <main id="topo">
 
 <!-- HERO -->
-<section class="hero" style="padding-bottom:0">
-  <img class="star" src="assets/Vector.webp" alt="" aria-hidden="true">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="pill"><span class="dot"><svg><use href="#i-pin"/></svg></span><span class="hide-sm">Cruzeiro do Sul ·&nbsp;</span>Polo Americana Centro – SP</span>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="pill"><span class="dot"><svg><use href="#i-pin"/></svg></span>Cruzeiro do Sul · Polo Americana Centro – SP</span>
       <h1>Estude com flexibilidade, qualidade e <em>mensalidades que cabem no bolso</em></h1>
-      <p class="sub">Você não precisa parar sua vida para fazer uma faculdade.</p>
-      <p class="body">Na Cruzeiro do Sul Virtual – Polo Americana Centro, você conquista o diploma que sempre sonhou com autonomia, suporte de qualidade e um valor que realmente faz sentido para o seu momento.</p>
-      <p class="body">Essa é a oportunidade de transformar sua realidade com cursos EAD e Semipresenciais de Graduação além dos cursos de Pós-Graduação.</p>
-      <div class="ctas">
-        <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
-        <a class="btn btn-ghost" href="#cursos">Ver cursos <svg><use href="#i-arrow"/></svg></a>
+      <div class="intro">
+        <b>Você não precisa parar sua vida para fazer uma faculdade.</b>
+        <p>Na Cruzeiro do Sul Virtual – Polo Americana Centro, você conquista o diploma que sempre sonhou com autonomia, suporte de qualidade e um valor que realmente faz sentido para o seu momento.</p>
+        <p>Essa é a oportunidade de transformar sua realidade com cursos EAD e Semipresenciais de Graduação além dos cursos de Pós-Graduação.</p>
       </div>
-      <div class="trust">
-        <span><svg><use href="#i-check"/></svg>Reconhecido pelo MEC</span>
-        <span><svg><use href="#i-check"/></svg>Comece em qualquer mês</span>
-        <span><svg><use href="#i-check"/></svg>Polo no Centro de Americana</span>
+      <div class="act">
+        <div class="row">
+          <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
+          <a class="btn btn-line" href="#cursos">Ver cursos <svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="trust">
+          <span><svg><use href="#i-check"/></svg>Reconhecido pelo MEC</span>
+          <span><svg><use href="#i-check"/></svg>Comece em qualquer mês</span>
+          <span><svg><use href="#i-check"/></svg>Polo no Centro de Americana</span>
+        </div>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="assets/2IMAGEM-02.webp" alt="Estudante sorridente com notebook — flexibilidade para estudar em cursos EAD e Semipresenciais" width="590" height="633" fetchpriority="high">
-      <div class="float-card" aria-hidden="true">
+
+    <div class="bento stats">
+      <div class="t photo s6 r2">
+        <div class="cap"><b>+190 cursos</b><small>Graduação e Pós</small></div>
+        <img src="assets/2IMAGEM-02.webp" alt="Estudante sorridente com notebook — flexibilidade para estudar em cursos EAD e Semipresenciais" width="590" height="633" fetchpriority="high">
+      </div>
+      <div class="t stat s3">
         <span class="ic"><svg><use href="#i-cap"/></svg></span>
-        <span><b>+190 cursos</b><small>Graduação e Pós</small></span>
+        <div><div class="k" data-count="100">+100</div><p>cursos de Graduação</p></div>
+      </div>
+      <div class="t stat s3">
+        <span class="ic"><svg><use href="#i-book"/></svg></span>
+        <div><div class="k" data-count="90">+90</div><p>cursos de Pós-Graduação</p></div>
+      </div>
+      <div class="t stat dark s3">
+        <span class="ic"><svg><use href="#i-globe"/></svg></span>
+        <div><div class="k" data-count="1500">+1.500</div><p>polos pelo Brasil</p></div>
+      </div>
+      <div class="t stat pop s3">
+        <span class="ic"><svg><use href="#i-cal"/></svg></span>
+        <div><div class="k">Todo mês</div><p>ingresso em qualquer mês do ano</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="wrap">
-    <div class="stat"><b data-count="100">+100</b><span>cursos de Graduação</span></div>
-    <div class="stat"><b data-count="90">+90</b><span>cursos de Pós-Graduação</span></div>
-    <div class="stat"><b data-count="1500">+1.500</b><span>polos pelo Brasil</span></div>
-    <div class="stat"><b>Todo mês</b><span>ingresso em qualquer mês do ano</span></div>
-  </div>
-</div>
-
 <!-- POLO -->
 <section class="polo">
-  <div class="wrap polo-grid">
-    <div class="rv">
-      <span class="eyebrow">Polo de apoio presencial</span>
-      <h2 class="light">Estude com o suporte do <em>Polo Americana Centro</em></h2>
+  <div class="wrap bento">
+    <div class="t polo-main s7 rv">
+      <span class="label">Polo de apoio presencial</span>
+      <h2>Estude com o suporte do <em>Polo Americana Centro</em></h2>
       <h3>Se você mora em Americana-SP ou região, já tem um grande motivo para iniciar sua jornada:</h3>
       <p>Um polo de apoio presencial pertinho de você. Aqui, você tem acesso à estrutura da Cruzeiro do Sul Virtual, com orientações, apoio acadêmico e atendimento sempre que precisar. Tudo para garantir que sua experiência acadêmica seja completa e eficiente.</p>
-      <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
+      <div><a class="btn btn-ink js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a></div>
     </div>
-    <aside class="polo-card rv" aria-label="Endereço e contato do polo">
-      <span class="tag">Venha nos visitar</span>
+    <aside class="t dark polo-card s5 rv" aria-label="Endereço e contato do polo">
+      <span class="glow"></span>
+      <span class="label">Venha nos visitar</span>
       <h4>Polo Americana Centro</h4>
       <ul>
         <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&query=R.+Sete+de+Setembro,+85+-+Centro,+Americana+-+SP,+13465-320" target="_blank" rel="noopener">R. Sete de Setembro, 85 – Centro, Americana – SP · CEP 13465-320</a></li>
@@ -399,52 +431,53 @@ footer a:hover{color:#fff}
 <!-- POR QUE -->
 <section id="porque">
   <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="eyebrow">Diferenciais</span>
-      <h2 class="light">Por que escolher a <em>Cruzeiro do Sul Virtual?</em></h2>
+    <div class="head rv">
+      <div><span class="label">Diferenciais</span><h2 style="margin-top:12px">Por que escolher a <em>Cruzeiro do Sul Virtual?</em></h2></div>
     </div>
     <div class="bento">
-      <article class="card feat rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Mais autonomia para estudar no seu ritmo</h3>
-        <p>Tenha liberdade para organizar seus horários e estudar quando for mais conveniente — ideal para quem trabalha ou cuida da família.</p>
+      <article class="t lav card feat s6 r2 rv">
+        <div class="clock">no seu<br>ritmo.</div>
+        <div>
+          <h3>Mais autonomia para estudar no seu ritmo</h3>
+          <p>Tenha liberdade para organizar seus horários e estudar quando for mais conveniente — ideal para quem trabalha ou cuida da família.</p>
+        </div>
       </article>
-      <article class="card rv">
+      <article class="t card s3 rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="12" cy="12.5" r="2.5"/><path d="M6 10v5M18 10v5"/></svg></div>
         <h3>Economia no Bolso</h3>
         <p>Mensalidades acessíveis e redução de gastos com transporte, alimentação e materiais físicos. Você investe menos e aprende mais.</p>
       </article>
-      <article class="card rv">
+      <article class="t card s3 rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8z"/></svg></div>
         <h3>Qualidade reconhecida pelo MEC</h3>
         <p>A mesma validade e seriedade dos cursos presenciais, com diploma reconhecido e professores altamente qualificados.</p>
       </article>
-      <article class="card rv">
+      <article class="t card s3 rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M10 8.5l4 1.5-4 1.5z"/></svg></div>
         <h3>Acesso a uma plataforma moderna e intuitiva</h3>
         <p>Ambiente virtual fácil de usar, com videoaulas, fóruns, exercícios e conteúdos atualizados — tudo a um clique de distância.</p>
       </article>
-      <article class="card rv">
+      <article class="t card s3 rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
         <h3>Suporte dedicado em toda a sua jornada</h3>
         <p>Você não estuda sozinho. Conte com atendimento personalizado, tutores preparados e canais de suporte sempre disponíveis para tirar dúvidas e orientar seu progresso.</p>
       </article>
-      <article class="card accent rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></div>
-        <h3>Comece agora — sem esperar o próximo semestre</h3>
-        <p>Na Cruzeiro do Sul Virtual, você pode iniciar sua faculdade ou pós-graduação em qualquer mês do ano. Não adie seu futuro!</p>
+      <article class="t pop go-now s12 rv">
+        <div>
+          <h3>Comece agora — sem esperar o próximo semestre</h3>
+          <p>Na Cruzeiro do Sul Virtual, você pode iniciar sua faculdade ou pós-graduação em qualquer mês do ano. Não adie seu futuro!</p>
+        </div>
+        <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
       </article>
     </div>
-    <div class="bento-cta rv"><a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a></div>
   </div>
 </section>
 
 <!-- CURSOS -->
-<section class="courses" id="cursos">
+<section id="cursos">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Ainda não decidiu?</span>
-      <h2 class="light">Confira os cursos <em>mais procurados</em></h2>
+    <div class="head rv">
+      <div><span class="label">Ainda não decidiu?</span><h2 style="margin-top:12px">Confira os cursos <em>mais procurados</em></h2></div>
     </div>
     <div class="c-toolbar rv">
       <div class="tabs" role="tablist" aria-label="Modalidade">
@@ -455,9 +488,9 @@ footer a:hover{color:#fff}
       <label class="search"><span class="sr">Buscar curso</span><svg><use href="#i-search"/></svg><input id="q" type="search" placeholder="Buscar curso…" autocomplete="off"></label>
     </div>
     <div class="grid-c" id="grid" role="tabpanel" aria-live="polite"></div>
-    <div class="more-row"><button class="btn btn-outline" id="more" hidden>Ver mais cursos</button></div>
+    <div class="more-row"><button class="btn btn-line" id="more" hidden>Ver mais cursos</button></div>
 
-    <div class="mec-band rv">
+    <div class="t dark mec rv">
       <p>Oferecemos mais de <b>100 cursos de Graduação</b> e mais de <b>90 de Pós-Graduação</b>, todos reconhecidos e regulamentados pelo MEC.</p>
       <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Conheça todos os cursos</a>
     </div>
@@ -466,41 +499,43 @@ footer a:hover{color:#fff}
 
 <!-- PARA QUEM -->
 <section>
-  <div class="wrap who-grid">
-    <div class="rv">
-      <span class="eyebrow">É pra você?</span>
-      <h2 class="light">Para quem é a <em>Cruzeiro do Sul Virtual?</em></h2>
+  <div class="wrap bento">
+    <div class="t s7 rv">
+      <span class="label">É pra você?</span>
+      <h2 style="margin-top:12px">Para quem é a <em>Cruzeiro do Sul Virtual?</em></h2>
       <ul class="who-list">
-        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Para quem sonha em ter um diploma reconhecido com flexibilidade.</li>
-        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Para quem precisa de mais tempo e não pode parar para fazer um curso presencial.</li>
-        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Para quem busca melhores oportunidades de emprego e crescimento profissional.</li>
-        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Para quem já trabalha na área e quer se atualizar ou ampliar os conhecimentos.</li>
-        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Para quem quer estudar em uma das maiores instituições de ensino EAD do Brasil, com estrutura e credibilidade.</li>
+        <li><span class="n">01</span>Para quem sonha em ter um diploma reconhecido com flexibilidade.</li>
+        <li><span class="n">02</span>Para quem precisa de mais tempo e não pode parar para fazer um curso presencial.</li>
+        <li><span class="n">03</span>Para quem busca melhores oportunidades de emprego e crescimento profissional.</li>
+        <li><span class="n">04</span>Para quem já trabalha na área e quer se atualizar ou ampliar os conhecimentos.</li>
+        <li><span class="n">05</span>Para quem quer estudar em uma das maiores instituições de ensino EAD do Brasil, com estrutura e credibilidade.</li>
       </ul>
       <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
     </div>
-    <div class="who-visual rv" aria-hidden="true">
+    <div class="t dark rhythm s5 rv" aria-hidden="true">
       <img class="star" src="assets/Vector.webp" alt="">
-      <div class="big">Seu ritmo.</div>
-      <p class="cap">Estude de casa, no intervalo do trabalho ou depois que as crianças dormirem.</p>
-      <div class="chips"><span>EAD</span><span>Semipresencial</span><span>Pós-Graduação</span><span>Diploma MEC</span></div>
+      <div class="big">Seu<br>ritmo.</div>
+      <div>
+        <p class="cap">Estude de casa, no intervalo do trabalho ou depois que as crianças dormirem.</p>
+        <div class="chips" style="margin-top:20px"><span>EAD</span><span>Semipresencial</span><span>Pós-Graduação</span><span>Diploma MEC</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FUTURO -->
-<section class="future">
-  <div class="wrap future-grid">
-    <div class="rv">
-      <span class="eyebrow">Credibilidade nacional</span>
+<section>
+  <div class="wrap bento">
+    <div class="t future-main s7 rv">
+      <span class="label">Credibilidade nacional</span>
       <h2>Construa o seu futuro com quem entende de <em>ensino a distância</em></h2>
       <h3>A Cruzeiro do Sul Virtual já impactou a vida de milhares de alunos em todo o Brasil. São mais de 1.500 polos espalhados pelo país, com tecnologia de ponta e metodologia comprovada.</h3>
       <p>Se a sua cidade não possui um polo, não tem problema: com Cruzeiro do Sul nenhuma distância te impede de realizar o seu sonho, até as provas são online. Mas se você está em Americana-SP, aproveite toda a estrutura do nosso polo presencial no Centro da cidade.</p>
     </div>
-    <div class="map-card rv">
-      <div class="num">+1.500</div>
-      <div class="lbl">polos espalhados pelo Brasil</div>
-      <div class="row">
+    <div class="t dark map s5 rv">
+      <span class="dots"></span>
+      <div style="position:relative"><div class="num">+1.500</div><div class="lbl">polos espalhados pelo Brasil</div></div>
+      <div class="row" style="position:relative">
         <div><b>Provas online</b><span>Ou no laboratório do polo, se precisar</span></div>
         <div><b>Polo no Centro</b><span>R. Sete de Setembro, 85 – Americana</span></div>
       </div>
@@ -511,9 +546,8 @@ footer a:hover{color:#fff}
 <!-- DEPOIMENTOS -->
 <section>
   <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="eyebrow">Depoimentos</span>
-      <h2 class="light">Veja o que nossos <em>alunos</em> estão falando</h2>
+    <div class="head rv">
+      <div><span class="label">Depoimentos</span><h2 style="margin-top:12px">Veja o que nossos <em>alunos</em> estão falando</h2></div>
     </div>
     <div class="vids">
       <div class="vid rv" data-yt="21Oy_bN772g"></div>
@@ -525,10 +559,10 @@ footer a:hover{color:#fff}
 </section>
 
 <!-- CTA -->
-<div class="cta">
+<section style="padding-top:0">
   <div class="wrap">
-    <div class="cta-box rv">
-      <img class="logo-badge" src="assets/LOGO.webp" alt="" width="115" height="115">
+    <div class="t dark cta rv">
+      <img class="badge" src="assets/LOGO.webp" alt="" width="115" height="115">
       <div>
         <h2>Faça parte da próxima turma do <em>Polo Americana Centro</em></h2>
         <p>Chegou a hora de dar o próximo passo. Você merece estudar com liberdade, suporte e reconhecimento.</p>
@@ -536,18 +570,18 @@ footer a:hover{color:#fff}
       <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
     </div>
   </div>
-</div>
+</section>
 
 <!-- FAQ -->
-<section class="faq" id="duvidas" style="padding-top:0">
-  <div class="wrap faq-grid">
-    <div class="faq-side rv">
-      <span class="eyebrow">Dúvidas</span>
-      <h2 class="light">Perguntas <em>Frequentes</em></h2>
+<section id="duvidas" style="padding-top:0">
+  <div class="wrap bento">
+    <div class="t lav faq-side s4 rv">
+      <span class="label">Dúvidas</span>
+      <h2>Perguntas <em>Frequentes</em></h2>
       <p>Não encontrou o que procurava? A equipe do polo responde pelo WhatsApp.</p>
       <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg>Garantir Minha Vaga Agora</a>
     </div>
-    <div class="rv">
+    <div class="t faq-list s8 rv">
       <details open><summary>O diploma do curso EAD tem o mesmo valor que o presencial?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sim. Todos os cursos da Cruzeiro do Sul Virtual são reconhecidos pelo MEC, e o diploma tem o mesmo peso e validade dos cursos presenciais.</p></details>
       <details><summary>Como funcionam as provas nos cursos EAD?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>As provas são realizadas no ambiente virtual de aprendizagem. Você também pode fazer presencialmente no polo utilizando o laboratório de informática, caso seja necessário.</p></details>
       <details><summary>Posso iniciar a faculdade em qualquer mês do ano?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sim. Um dos grandes diferenciais da Cruzeiro do Sul Virtual é a flexibilidade de ingresso. Você pode começar sua graduação ou pós-graduação no mês que for mais conveniente para você.</p></details>
@@ -562,30 +596,32 @@ footer a:hover{color:#fff}
 
 <footer>
   <div class="wrap">
-    <div class="f-grid">
-      <div>
-        <img src="assets/logo.png" alt="Cruzeiro do Sul Virtual" width="768" height="182">
-        <p>Polo de apoio presencial da Cruzeiro do Sul Virtual em Americana-SP. Graduação EAD, Semipresencial e Pós-Graduação.</p>
+    <div class="f">
+      <div class="f-grid">
+        <div>
+          <span class="f-logo"><img src="assets/logo.png" alt="Cruzeiro do Sul Virtual" width="768" height="182"></span>
+          <p>Polo de apoio presencial da Cruzeiro do Sul Virtual em Americana-SP. Graduação EAD, Semipresencial e Pós-Graduação.</p>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&query=R.+Sete+de+Setembro,+85+-+Centro,+Americana+-+SP,+13465-320" target="_blank" rel="noopener">R. Sete de Setembro, 85 – Centro, Americana – SP, CEP: 13465-320</a></li>
+            <li><svg><use href="#i-phone"/></svg><a href="tel:+551936485651">(19) 3648-5651</a></li>
+            <li><svg><use href="#i-phone"/></svg><a href="tel:+5519991741771">(19) 99174-1771</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#porque">Por que escolher</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li><a href="https://cruzeirodosulamericana.com.br/regulatorio">Novo Marco do EAD</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&query=R.+Sete+de+Setembro,+85+-+Centro,+Americana+-+SP,+13465-320" target="_blank" rel="noopener">R. Sete de Setembro, 85 – Centro, Americana – SP, CEP: 13465-320</a></li>
-          <li><svg><use href="#i-phone"/></svg><a href="tel:+551936485651">(19) 3648-5651</a></li>
-          <li><svg><use href="#i-phone"/></svg><a href="tel:+5519991741771">(19) 99174-1771</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Navegue</h4>
-        <ul>
-          <li><a href="#cursos">Cursos</a></li>
-          <li><a href="#porque">Por que escolher</a></li>
-          <li><a href="#duvidas">Dúvidas</a></li>
-          <li><a href="https://cruzeirodosulamericana.com.br/regulatorio">Novo Marco do EAD</a></li>
-        </ul>
-      </div>
+      <div class="copy">Cruzeiro do Sul Polo Americana Centro – Todos os Direitos Reservados</div>
     </div>
-    <div class="copy">Cruzeiro do Sul Polo Americana Centro – Todos os Direitos Reservados</div>
   </div>
 </footer>
 
@@ -605,21 +641,13 @@ footer a:hover{color:#fff}
   var I='assets/cursos/';
   var C={
     ead:[
-      ['Engenharia de Produção','ENGENHARIA-DE-PRODUCAO'],['Engenharia da Computação','ENGENHARIA-DA-COMPUTACAO'],
-      ['Educação Física','EDUCACAO-FISICA'],['Estética e Cosmética','ESTETICA_'],['Psicopedagogia','PSICOPEDAGOGIA'],
-      ['Administração','ADMINISTRACAO'],['Pedagogia','PEDAGOGIA'],['Ciências Contábeis','CIENCIAS-CONTABEIS'],
-      ['Análise e Desenvolvimento de Sistemas','ADS'],['Gestão Pública','GESTAO-PUBLICA'],['Serviço Social','SERVICO-SOCIAL'],
-      ['Gestão de Recursos Humanos','GESTAO-DE-RH'],['Marketing Digital','MARKETING-DIGITAL'],['Nutrição','NUTRICAO'],
-      ['Farmácia','FARMACIA'],['Engenharia Civil','ENGENHARIA-CIVIL'],['Engenharia Mecânica','ENGENHARIA-MECANICA'],
-      ['Terapia Ocupacional','TERAPIA-OCUPACIONAL']
+      ['Educação Física','EDUCACAO-FISICA'],['Administração','ADMINISTRACAO'],['Pedagogia','PEDAGOGIA'],
+      ['Ciências Contábeis','CIENCIAS-CONTABEIS'],['Análise e Desenvolvimento de Sistemas','ADS'],
+      ['Gestão Pública','GESTAO-PUBLICA'],['Serviço Social','SERVICO-SOCIAL'],
+      ['Gestão de Recursos Humanos','GESTAO-DE-RH'],['Marketing Digital','MARKETING-DIGITAL']
     ],
     sp:[
-      ['Biomedicina','BIOMEDICINA','Bacharelado'],['Engenharia Elétrica','ENGENHARIA-ELETRICA','Bacharelado'],
-      ['Engenharia Mecânica','ENGENHARIA-MECANICA-1','Bacharelado'],['Engenharia Mecatrônica','ENGENHARIA-ELETRICA','Bacharelado'],
-      ['Engenharia Civil','ENGENHARIA-CIVIL','Bacharelado'],['Óptica e Optometria','OPTICA-E-OPTOMETRIA'],
-      ['Engenharias','ENGENHARIA-DE-PRODUCAO'],['Farmácia','FARMACIA'],['Fisioterapia','FISIOTERAPIA','Bacharelado'],
-      ['Agronomia','AGRONOMIA','Bacharelado'],['Radiologia','RADIOLOGIA','Tecnólogo em 6 semestres'],
-      ['Gastronomia','GASTRONOMIA_','Tecnólogo em 4 semestres'],['Nutrição','NUTRICAO','Bacharelado']
+      ['Gastronomia','GASTRONOMIA_','Tecnólogo em 4 semestres']
     ],
     pg:[
       ['Engenharia de Segurança do Trabalho','Engenharia-de-Seguranca-do-Trabalho','Realizado em 12 meses'],
@@ -641,7 +669,7 @@ footer a:hover{color:#fff}
   };
   var LBL={ead:'Graduação EAD',sp:'Semipresencial',pg:'Pós-Graduação'};
   var grid=document.getElementById('grid'),more=document.getElementById('more'),q=document.getElementById('q');
-  var tab='ead',expanded=false,LIMIT=8;
+  var tab='ead',expanded=false,LIMIT=9;
   document.querySelectorAll('.tab').forEach(function(b){b.querySelector('.n').textContent=C[b.dataset.tab].length});
   function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
   function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
@@ -650,15 +678,16 @@ footer a:hover{color:#fff}
     if(term){
       list=[];['ead','sp','pg'].forEach(function(k){C[k].forEach(function(c){if(norm(c[0]).indexOf(term)>-1)list.push([c,k])})});
     }else list=C[tab].map(function(c){return[c,tab]});
-    var show=(term||expanded)?list:list.slice(0,LIMIT);
+    var all=term||expanded||list.length<=LIMIT;
+    var show=all?list:list.slice(0,LIMIT);
     grid.innerHTML=show.length?show.map(function(x){var c=x[0],k=x[1];
       return '<a class="course" target="_blank" rel="noopener" href="'+wa(c[0]+' ('+LBL[k]+')')+'">'+
-        '<div class="thumb"><img loading="lazy" src="'+I+c[1]+'.webp" alt="" width="340" height="183"></div>'+
+        '<div class="thumb"><img loading="lazy" src="'+I+c[1]+'.webp" alt="" decoding="async" width="340" height="183"></div>'+
         '<div class="body"><span class="mod">'+LBL[k]+'</span><h3>'+esc(c[0])+'</h3>'+(c[2]?'<p class="det">'+esc(c[2])+'</p>':'')+
         '<span class="go">Conheça Agora! <svg><use href="#i-arrow"/></svg></span></div></a>';
     }).join(''):'<p class="empty">Nenhum curso com esse nome na lista. Fale com o polo — são mais de 190 opções.</p>';
-    more.hidden=!!term||expanded||list.length<=LIMIT;
-    more.textContent='Ver mais '+(list.length-LIMIT)+' cursos';
+    more.hidden=all;
+    var rest=list.length-LIMIT;more.textContent='Ver mais '+rest+(rest>1?' cursos':' curso');
   }
   document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){
     document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
@@ -671,7 +700,7 @@ footer a:hover{color:#fff}
   // Depoimentos: carrega o player só no clique
   document.querySelectorAll('.vid').forEach(function(v,i){
     var id=v.dataset.yt;
-    v.innerHTML='<button aria-label="Assistir depoimento '+(i+1)+'"><img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" alt=""><span class="play"><svg><use href="#i-play"/></svg></span></button>';
+    v.innerHTML='<button aria-label="Assistir depoimento '+(i+1)+'"><img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" alt=""><span class="play"><i><svg><use href="#i-play"/></svg></i><span>Assistir depoimento</span></span></button>';
     v.querySelector('button').addEventListener('click',function(){
       v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Depoimento de aluno" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     });
@@ -695,7 +724,7 @@ footer a:hover{color:#fff}
       document.querySelectorAll('[data-count]').forEach(function(el){var t=+el.dataset.count,s=performance.now();
         (function f(n){var p=Math.min((n-s)/1200,1),v=Math.round(t*(1-Math.pow(1-p,3)));el.textContent='+'+v.toLocaleString('pt-BR');if(p<1)requestAnimationFrame(f)})(s);
       });
-    },{threshold:.5}).observe(stats);
+    },{threshold:.2}).observe(stats);
   }
 })();
 </script>
